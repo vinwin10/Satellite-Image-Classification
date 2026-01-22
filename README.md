@@ -50,7 +50,29 @@ The project is divided into four distinct modules, mirroring the learning path f
 * **Comparison:** While Keras offered faster initial setup, PyTorch provided better flexibility for customizing the Hybrid architecture.
 * **ViT Performance:** Vision Transformers excelled at distinguishing subtle vegetation patterns that standard CNNs occasionally missed, though they required careful hyperparameter tuning.
 
-##  Lessons Learned
-* **Lazy Loading is crucial:** Loading all satellite images into RAM simultaneously is a recipe for system crashes; batch processing is essential.
-* **No "Best" Framework:** Keras is unbeatable for quick proofs-of-concept, while PyTorch is superior for research and complex custom architectures.
-* **The Power of Hybrids:** Combining the inductive bias of CNNs with the dynamic attention of Transformers results in robust models suitable for complex "real-world" textures like satellite imagery.
+## 💻 Usage
+To run the notebooks:
+
+**1. Clone the repository:**
+```bash
+git clone https://github.com/vinwin10/Satellite-Image-Classification.git
+```
+
+**2. Install dependencies:**
+```bash
+pip install numpy pandas matplotlib tensorflow torch torchvision skillsnetwork
+```
+**3. Data Setup: Download and extract the training data (images-dataSAT.tar):**
+Download the dataset and Extract the files
+```bash
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/4Z1fwRR295-1O3PMQBH6Dg/images-dataSAT.tar
+
+tar -xvf images-dataSAT.tar
+```
+Ensure the extracted folders (class_0_non_agri and class_1_agri) are located in your project's data directory.
+**4. Run Jupyter: Open the notebook corresponding to the module you wish to review (e.g., Module_3_Hybrid_ViT.ipynb).**
+
+## 🚀 Key Results
+* **Accuracy:** The final CNN-ViT Hybrid model achieved over **95% accuracy** on the test set.
+* **Comparison:** While Keras offered faster initial setup, PyTorch provided better flexibility for customizing the Hybrid architecture.
+* **ViT Performance:** Vision Transformers excelled at distinguishing subtle vegetation patterns that standard CNNs occasionally missed, though they required careful hyperparameter tuning.
